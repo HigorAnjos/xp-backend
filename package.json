@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint -c .eslintrc.json ."
   },
   "repository": {
     "type": "git",
