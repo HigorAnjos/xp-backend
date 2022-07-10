@@ -9,6 +9,7 @@
     "lint": "eslint -c .eslintrc.json .",
     "test": "jest --runInBand --testTimeout=60000",
     "test:cov": "jest --runInBand --testTimeout=60000 --coverage",
+    "test:uni": "mocha ./tests/unitary/**/**/*$NAMETEST*.test.js --exit",
     "ci:test": "jest --ci"
   },
   "jest": {
