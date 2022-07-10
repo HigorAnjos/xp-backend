@@ -15,8 +15,8 @@ jobs:
           run: npm install
 
         - name: executando o lint para verificar se a erros
-          run: npm run lint
+          run: npx eslint .
 
-        - name: executando tests de integracao
+        - name: test integracao
           run: npm test
 
