@@ -7,20 +7,21 @@ on:
       branches: [ main ]
 
 jobs:
-  # tests-integration:
-  #   runs-on: ubuntu-18.04
+  tests-integration:
+    runs-on: ubuntu-18.04
 
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-  #     - name: Setup Node.js environment
-  #       uses: actions/setup-node@v2.2.0
-  #       with:
-  #         node-version: ${{ matriz.node-version }}
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.2.0
+        with:
+          node-version: ${{ matriz.node-version }}
 
-  #     - name: Install dependencies
-  #       run: npm install
+      - name: Install dependencies
+        run: npm install
+
   eslint:
     runs-on: ubuntu-latest
     steps:
@@ -31,7 +32,6 @@ jobs:
           uses: actions/setup-node@v1
           with:
             node-version: 14
-
 
         - name: instalando as dependências
           run: npm install
