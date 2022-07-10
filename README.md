@@ -3,7 +3,7 @@
 <p align="center">Projeto para processo seletivo da xp :rocket: </p>
 
 <p align="center">
-  <a href="#Heroku">Heroku</a> •
+  <a href="#Node">Node</a> •
   <a href="#Postman">Postman</a> •
   <a href="#Tecnologias">Tecnologias</a> •
   <a href="#Autor">Autor</a>
@@ -160,4 +160,38 @@
 </details>
 
 <br>
+
+
+---
+
+## Node
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+---
+
+## Rodando com Node
+
+```bash
+# Clone este repositório
+$ git clone git@github.com:HigorAnjos/xp-backend.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd xp-backend
+
+# Instale as dependências
+$ npm install
+
+# iniciar o projeto
+$ npm start
+```
+
+A aplicação estara disponivel em ```http://localhost:3000/```
+
+---
 
