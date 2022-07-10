@@ -19,3 +19,13 @@ jobs:
 
         - name: executando o lint para verificar se a erros
           run: npx eslint .
+
+  evaluator:
+    name: Evaluator Job
+    runs-on: ubuntu-18.04
+    needs: [eslint]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Evaluator step
+        id: evaluator
+        uses: betrybe/cypress-evaluator-action@v5
