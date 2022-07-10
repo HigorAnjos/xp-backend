@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="#Node">Node</a> •
-  <a href="#Postman">Postman</a> •
+  <a href="#Docker-Compose">Docker-Compose</a> •
   <a href="#Tecnologias">Tecnologias</a> •
   <a href="#Autor">Autor</a>
 </p>
@@ -193,5 +193,39 @@ $ npm start
 
 A aplicação estara disponivel em ```http://localhost:3000/```
 
+---
+
+## Docker-Compose
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Docker](https://www.docker.com/), [Docker Compose](https://docs.docker.com/compose/install/).
+
+## Rodando com o doker-compose
+
+```bash
+# Clone este repositório
+$ git clone git@github.com:HigorAnjos/xp-backend.git
+
+# Rodar o docker-compose
+$ docker compose up -d
+
+# Acessar a aplicação docker
+$ docker exec -it xp_backend_node bash
+
+# Instale as dependências
+$ npm install
+
+# Rodar o projeto
+$ npm start
+```
+
+A aplicação estara disponivel em ```http://localhost:3000```
+
+Parar o container
+```bash
+$ docker compose down
+```
 ---
 
