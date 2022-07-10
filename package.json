@@ -8,7 +8,8 @@
     "start": "node index.js",
     "lint": "eslint -c .eslintrc.json .",
     "test": "jest --runInBand --testTimeout=60000",
-    "test:cov": "jest --runInBand --testTimeout=60000 --coverage"
+    "test:cov": "jest --runInBand --testTimeout=60000 --coverage",
+    "ci:test": "jest --ci"
   },
   "jest": {
     "rootDir": "./tests/integration"
