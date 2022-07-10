@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "lint": "eslint -c .eslintrc.json ."
+    "lint": "eslint -c .eslintrc.json .",
+    "test": "jest --runInBand --testTimeout=60000",
+    "test:cov": "jest --runInBand --testTimeout=60000 --coverage"
+  },
+  "jest": {
+    "rootDir": "./tests/integration"
   },
   "repository": {
     "type": "git",
@@ -27,9 +32,14 @@
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
     "eslint": "^8.19.0",
     "eslint-config-trybe-backend": "^1.0.4",
     "eslint-plugin-sonarjs": "^0.13.0",
-    "nodemon": "^2.0.19"
+    "jest": "^28.1.2",
+    "nodemon": "^2.0.19",
+    "nyc": "^15.1.0",
+    "sinon": "^14.0.0",
+    "supertest": "^6.2.3"
   }
 }
