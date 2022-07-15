@@ -8,7 +8,9 @@
     "start": "node index.js",
     "lint": "eslint -c .eslintrc.json .",
     "test": "jest --runInBand --testTimeout=60000",
-    "test:cov": "jest --runInBand --testTimeout=60000 --coverage"
+    "test:cov": "jest --runInBand --testTimeout=60000 --coverage",
+    "test:uni": "mocha ./tests/unity/**/**/*$NAMETEST*.test.js --exit",
+    "ci:test": "jest --ci"
   },
   "jest": {
     "rootDir": "./tests/integration"
@@ -38,6 +40,7 @@
     "eslint-config-trybe-backend": "^1.0.4",
     "eslint-plugin-sonarjs": "^0.13.0",
     "jest": "^28.1.2",
+    "mocha": "^10.0.0",
     "nodemon": "^2.0.19",
     "nyc": "^15.1.0",
     "sinon": "^14.0.0",
