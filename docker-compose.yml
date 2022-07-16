@@ -31,7 +31,7 @@ services:
     environment:
       DB_USER: root
       DB_PASSWORD: password
-      DB_NAME: model_phonebook
+      DB_NAME: xp_backend
       DB_HOST: db # Nome do service logo abaixo
       PORT: '3001'
 
