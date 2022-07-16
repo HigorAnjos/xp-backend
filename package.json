@@ -11,10 +11,11 @@
     "test:cov": "jest --runInBand --testTimeout=60000 --coverage",
     "test:uni": "mocha ./tests/unity/**/**/*$NAMETEST*.test.js --exit",
     "ci:test": "jest --ci",
-    "db:init": "npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
-    "db:drop": "npx sequelize-cli db:drop",
+    "db:create": "npx sequelize-cli db:create",
     "db:migrate": "npx sequelize-cli db:migrate",
-    "db:seed": "npx sequelize-cli db:seed:all"
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "db:drop": "npx sequelize-cli db:drop",
+    "db:init": "npm run db:drop && npm run db:create && npm run db:migrate && npm run db:seed"
   },
   "jest": {
     "rootDir": "./tests/integration"
