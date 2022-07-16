@@ -1,12 +1,6 @@
 const WalletProduct = (sequelize, DataTypes) => {
 
   const schemaWalletProduct = sequelize.define('PostCategory', {
-    id: {
-      allowNull: false,
-      autoIncrement: true,
-      primaryKey: true,
-      type: DataTypes.INTEGER
-    },
     walletId: {
       type: DataTypes.INTEGER,
       allowNull: false,
