@@ -20,7 +20,7 @@ const login = async (client) => {
     throw { status: 404, message: 'Cliente nao encontrado' };
   }
   await isValidPassword(clientFound, client.password);
-  const token = jwt.createToken(withOutPassword(clientFound));
+  const token = await jwt.createToken(await withOutPassword(clientFound));
 
   return token;
 };

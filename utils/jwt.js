@@ -17,6 +17,6 @@ const verifyToken = (token) => new Promise((resolve, reject) => {
     });
   });
 
-const createToken = (payload) => jwt.sign({ payload }, secret, JWT_CONFIG);
+const createToken = async (payload) => jwt.sign({ payload }, secret, JWT_CONFIG);
 
 module.exports = { verifyToken, createToken };
