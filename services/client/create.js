@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt');
 const { Client, Wallet, sequelize } = require('../../database/models');
 const { createToken } = require('../../utils/jwt');
 
@@ -13,7 +14,8 @@ const generateToken = async (newClient) => {
 
 const transaction = async ({ email, password }) => {
   const result = await sequelize.transaction(async (t) => {
-    const newClient = await Client.create({ email, password }, { transaction: t });
+    const cryptedPassword = await bcrypt.hash(password, 10);
+    const newClient = await Client.create({ email, password: cryptedPassword }, { transaction: t });
     await Wallet.create({ clientId: newClient.id, balance: 0 }, { transaction: t });
     return newClient;
   });
