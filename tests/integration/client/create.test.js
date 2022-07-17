@@ -3,8 +3,6 @@ const shell = require('shelljs');
 const server = require('../../../server');
 require('dotenv').config();
 
-const request = supertest(server);
-
 const { sequelize: sequelizeCli } = require('../assets/sequelize');
 
 shell.exec([
@@ -15,7 +13,8 @@ shell.exec([
 ].join(' && '),
   { silent: process.env.DEBUG === 'false' });
 
-const ROUTER = '/client/create';
+const request = supertest(server);
+const END_POINT = '/client/create';
 
 describe('Rota Client create', function () {
   it('Deve criar um novo cliente', async function () {
@@ -24,7 +23,7 @@ describe('Rota Client create', function () {
       password: '123456',
     };
 
-    const response = await request.post(ROUTER).send(newClient);
+    const response = await request.post(END_POINT).send(newClient);
 
     expect(response.status).toBe(201);
     expect(response.body).toHaveProperty('token');
@@ -37,7 +36,7 @@ describe('Rota Client create', function () {
       password: '123456',
     };
 
-    const response = await request.post(ROUTER).send(newClient);
+    const response = await request.post(END_POINT).send(newClient);
 
     expect(response.status).toBe(400);
     expect(response.body).toHaveProperty('message');
@@ -49,7 +48,7 @@ describe('Rota Client create', function () {
       email: 'novocliente@gmail.com',
     };
 
-    const response = await request.post(ROUTER).send(newClient);
+    const response = await request.post(END_POINT).send(newClient);
 
     expect(response.status).toBe(400);
     expect(response.body).toHaveProperty('message');
@@ -61,7 +60,7 @@ describe('Rota Client create', function () {
       password: '123456',
     };
 
-    const response = await request.post(ROUTER).send(newClient);
+    const response = await request.post(END_POINT).send(newClient);
 
     expect(response.status).toBe(400);
     expect(response.body).toHaveProperty('message');
