@@ -5,8 +5,8 @@ const auth = async (req, res, next) => {
   if (!authorization) throw { status: 401, message: 'authorization nao infomado' };
 
   try {
-    const { payload: { id, email } } = await jwt.verifyToken(authorization);
-    req.client = { id, email };
+    const { payload: { id } } = await jwt.verifyToken(authorization);
+    req.client = { id };
   } catch (err) {
     return res.status(400).json({
       message: 'Token inválido',
