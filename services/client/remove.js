@@ -20,7 +20,7 @@ const transaction = async (clientId) => {
 
     if (walletProducts.length > 0) {
       throw {
-        status: 400, message: 'Não é possível remover o cliente, pois possui produtos na conta'
+        status: 400, message: 'Não é possível remover o cliente, pois possui produtos na conta',
       };
     }
     await Client.destroy({ where: { id: clientId } }, { transaction: t });
