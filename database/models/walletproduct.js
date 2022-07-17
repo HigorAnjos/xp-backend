@@ -1,6 +1,6 @@
 const WalletProduct = (sequelize, DataTypes) => {
 
-  const schemaWalletProduct = sequelize.define('PostCategory', {
+  const schemaWalletProduct = sequelize.define('WalletProduct', {
     walletId: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -34,7 +34,7 @@ const WalletProduct = (sequelize, DataTypes) => {
       type: DataTypes.DATE
     },
   }, {
-    tableName: 'PostCategories',
+    tableName: 'WalletProducts',
     modelName: 'WalletProduct',
     timestamps: true, // true by default
   });
@@ -54,6 +54,8 @@ const WalletProduct = (sequelize, DataTypes) => {
       foreignKey: 'walletId',
     });
   };
+
+  schemaWalletProduct.removeAttribute('id');
 
   return schemaWalletProduct;
 };

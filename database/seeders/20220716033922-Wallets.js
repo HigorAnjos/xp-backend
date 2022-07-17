@@ -27,6 +27,13 @@ module.exports = {
       {
         id: 4,
         clientId: 4,
+        balance: 500,
+        createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+      },
+      {
+        id: 5,
+        clientId: 5,
         balance: 0,
         createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
         updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),

@@ -10,15 +10,12 @@
     "test": "jest --runInBand --testTimeout=60000",
     "test:cov": "jest --runInBand --testTimeout=60000 --coverage",
     "test:uni": "mocha ./tests/unity/**/**/*$NAMETEST*.test.js --exit",
-    "ci:test": "jest --ci",
+    "ci:test": "jest ./tests/unity/**/*.test.js --ci --runInBand --testTimeout=60000",
     "db:create": "npx sequelize-cli db:create",
     "db:migrate": "npx sequelize-cli db:migrate",
     "db:seed": "npx sequelize-cli db:seed:all",
     "db:drop": "npx sequelize-cli db:drop",
     "db:init": "npm run db:drop && npm run db:create && npm run db:migrate && npm run db:seed"
-  },
-  "jest": {
-    "rootDir": "./tests/integration"
   },
   "repository": {
     "type": "git",
@@ -54,6 +51,7 @@
     "nodemon": "^2.0.19",
     "nyc": "^15.1.0",
     "sequelize-cli": "^6.4.1",
+    "shelljs": "^0.8.5",
     "sinon": "^14.0.0",
     "supertest": "^6.2.3"
   }
