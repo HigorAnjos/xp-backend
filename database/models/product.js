@@ -7,7 +7,7 @@ const Product = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER
     },
     name: DataTypes.STRING,
-    price: DataTypes.INTEGER,
+    price: DataTypes.DOUBLE,
     quantity: DataTypes.INTEGER
   }, {
     tableName: 'Products',

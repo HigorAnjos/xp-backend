@@ -21,7 +21,7 @@ module.exports = {
         },
       },
       salePrice: {
-        type: Sequelize.INTEGER
+        type: Sequelize.DOUBLE
       },
       quantity: {
         type: Sequelize.INTEGER
