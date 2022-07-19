@@ -1,3 +1,4 @@
 const client = require('./client');
+const balance = require('./balance');
 
-module.exports = { client };
+module.exports = { client, balance };

@@ -20,7 +20,7 @@ const WalletProduct = (sequelize, DataTypes) => {
       },
     },
     salePrice: {
-      type: DataTypes.INTEGER
+      type: DataTypes.DOUBLE
     },
     quantity: {
       type: DataTypes.INTEGER

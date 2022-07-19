@@ -13,6 +13,14 @@ module.exports = {
       },
       {
         walletId: 1,
+        productId: 1, // XPBR31
+        salePrice: 100.00,
+        quantity: 1,
+        createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+      },
+      {
+        walletId: 1,
         productId: 2, // VALE3
         salePrice: 10,
         quantity: 1,
