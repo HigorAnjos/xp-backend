@@ -17,25 +17,6 @@ const request = supertest(server);
 const ACTIVE_ID = 1;
 const END_POINT = `/active/find/${ACTIVE_ID}`;
 
-const dbMock = {
-  id: 1,
-  email: 'george@gmail.com',
-  products: [
-      {
-          code: 1,
-          name: 'XPBR31',
-          salePrice: 94.31,
-          quantity: 1,
-      },
-      {
-          code: 1,
-          name: 'XPBR31',
-          salePrice: 100,
-          quantity: 1,
-      },
-  ],
-};
-
 describe('Rota Active find', function () {
   it('Deve ser possivel obter um ativo de um cliente', async function () {
     const client = {
