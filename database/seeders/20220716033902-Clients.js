@@ -39,6 +39,20 @@ module.exports = {
         createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
         updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
       },
+      {
+        id: 6,
+        email: 'Buy@gmail.com',
+        password: '$2b$10$UV/ysb2SHtMS1X6OWnwG3uswnjbyE1fzFRgjnGzI1d2wE3yxUPbDW', //  password:1234
+        createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+      },
+      {
+        id: 7,
+        email: 'Sell@gmail.com',
+        password: '$2b$10$JhazuBx87RX3iR2OKXnZ.umWf3yfTvCLoSn.hNZ1IU5d3YcAmVXcK', //  password:1234
+        createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+      },
     ], {}),
 
   down: (queryInterface) => queryInterface.bulkDelete('Clients', null, {}),

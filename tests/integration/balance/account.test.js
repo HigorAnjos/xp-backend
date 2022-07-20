@@ -33,6 +33,6 @@ describe('Rota Balance account', function () {
     .set('authorization', authorization);
 
     expect(response.status).toBe(200);
-    expect(response.body.balance).toBe(500);
+    expect(response.body.balance).toBe('500.00');
   });
 });

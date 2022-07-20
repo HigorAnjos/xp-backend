@@ -36,11 +36,11 @@ describe('Rota Active find', function () {
     expect(response.body.products.length).toBe(2);
     expect(response.body.products[0].code).toBe(1);
     expect(response.body.products[0].name).toBe('XPBR31');
-    expect(response.body.products[0].salePrice).toBe(94.31);
+    expect(response.body.products[0].salePrice).toBe('94.31');
     expect(response.body.products[0].quantity).toBe(1);
     expect(response.body.products[1].code).toBe(1);
     expect(response.body.products[1].name).toBe('XPBR31');
-    expect(response.body.products[1].salePrice).toBe(100);
+    expect(response.body.products[1].salePrice).toBe('100.00');
     expect(response.body.products[1].quantity).toBe(1);
   });
 });

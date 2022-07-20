@@ -21,7 +21,7 @@ module.exports = {
         },
       },
       salePrice: {
-        type: Sequelize.DOUBLE
+        type: Sequelize.DECIMAL(10, 2),
       },
       quantity: {
         type: Sequelize.INTEGER
