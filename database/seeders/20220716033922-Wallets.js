@@ -38,6 +38,20 @@ module.exports = {
         createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
         updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
       },
+      {
+        id: 6,
+        clientId: 6,
+        balance: 1000.00,
+        createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+      },
+      {
+        id: 7,
+        clientId: 7,
+        balance: 100.00,
+        createdAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+        updatedAt: Sequelize.literal('CURRENT_TIMESTAMP'),
+      },
     ], {}),
 
   down: (queryInterface) => queryInterface.bulkDelete('Wallets', null, {}),
