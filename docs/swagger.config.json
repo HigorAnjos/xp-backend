@@ -1,0 +1,111 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Api desafio XP",
+    "description": "Api desafio XP",
+    "version": "1.0.0",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "higorc.anjos@gmail.com",
+      "name": "Higor Anjos",
+      "url": "https://www.linkedin.com/in/higoranjos/"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001",
+      "description": "localhost"
+    },
+    {
+      "url": "https://xpbackend.herokuapp.com/",
+      "description": "producao"
+    }
+  ],
+  "paths": {
+    "/client/create": {
+      "post": {
+        "summary": "Cadastro de cliente",
+        "description": "Essa rota e responsavel por cadastrar um novo cliente",
+        "tags": ["Client"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              },
+              "examples": {
+                "client": {
+                  "value": {
+                    "email": "higorc.anjos@gmail.com",
+                    "password": "1234"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Token"
+
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Alguma mensagem de error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Client": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "Token": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        }
+      },
+      "BadRequest": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "message": "string"
+          }
+        }
+      }
+    }
+  }
+}
