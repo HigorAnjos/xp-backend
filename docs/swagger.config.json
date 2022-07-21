@@ -584,6 +584,36 @@
           }
         }
       }
+    },
+    "/investment/{code}": {
+      "get": {
+        "summary": "Lista um ativos disponiveis",
+        "description": "Lista um ativos disponiveis",
+        "tags": ["investment"],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "Codigo do ativo",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/investmentList"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -667,6 +697,29 @@
           },
           "quantity": {
             "type": "integer"
+          }
+        }
+      },
+      "investmentList": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "type": "string"
           }
         }
       }
