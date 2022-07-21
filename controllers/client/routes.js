@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/create', validations.client.create.isValidFilds, create);
 router.post('/login', validations.client.login.isValidFilds, login);
-router.delete('/delete', auth, remove);
 router.put('/update', auth, validations.client.update.isValidFilds, update);
+router.delete('/delete', auth, remove);
 
 module.exports = router;
