@@ -449,6 +449,42 @@
         }
       }
     },
+    "/active/find/{code}": {
+      "get": {
+        "summary": "Lista um ativos pretencente ao usuario",
+        "description": "Lista um ativos pretencente ao usuario",
+        "security": [{ "bearerAuth": [] }],
+        "tags": ["Active"],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "Codigo do ativo",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type":"integer"
+                    },
+                    "products": {
+                      "type": "array"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/investment/buy": {
       "post": {
         "summary": "Comprar um compra insvestimento",
