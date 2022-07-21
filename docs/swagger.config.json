@@ -312,7 +312,11 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/Ok"
+                  "properties": {
+                    "balance": {
+                      "type": "integer"
+                    }
+                  }
                 }
               }
             }

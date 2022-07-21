@@ -28,7 +28,7 @@ describe('Rota Balance deposit', function () {
     .set('authorization', authorization);
 
     expect(response.status).toBe(201);
-    expect(response.body.message).toBe('Deposito com sucesso');
+    expect(response.body.balance).toBe(100);
   });
 
   it('Nao deve ser possivel depositar valores negativos', async function () {
