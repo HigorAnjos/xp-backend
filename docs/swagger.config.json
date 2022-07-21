@@ -451,8 +451,8 @@
     },
     "/active/find/{code}": {
       "get": {
-        "summary": "Lista um ativos pretencente ao usuario",
-        "description": "Lista um ativos pretencente ao usuario",
+        "summary": "Lista um ativos pretencente ao cliente",
+        "description": "Lista um ativos pretencente ao cliente",
         "security": [{ "bearerAuth": [] }],
         "tags": ["Active"],
         "parameters": [
