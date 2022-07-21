@@ -7,7 +7,7 @@ const Wallet = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER
     },
     clientId: DataTypes.INTEGER,
-    balance: DataTypes.INTEGER
+    balance: DataTypes.DECIMAL(10, 2),
   }, {
     tableName: 'Wallets',
     modelName: 'Wallet',

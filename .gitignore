@@ -1,3 +1,4 @@
 node_modules
 tests/integration/coverage
 .env
+coverage
