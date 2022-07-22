@@ -11,18 +11,18 @@ const {
 
 module.exports = {
   development: {
-    username: 'root',
-    password: 'password',
-    database: 'xp_backend',
-    host: '127.0.0.1',
+    username: DB_USER || 'root',
+    password: DB_PASSWORD || 'password',
+    database: DB_NAME || 'xp_backend',
+    host: DB_HOST || 'localhost',
     dialect: 'mysql',
     port: 3306,
   },
   test: {
-    username: 'root',
-    password: 'password',
-    database: 'xp_backend',
-    host: '127.0.0.1',
+    username: DB_USER || 'root',
+    password: DB_PASSWORD || 'password',
+    database: DB_NAME || 'xp_backend',
+    host: DB_HOST || 'localhost',
     dialect: 'mysql',
     port: 3306,
   },
