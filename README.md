@@ -103,6 +103,7 @@ $ docker compose down
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Git](https://git-scm.com/)
+- [Github Actions](https://docs.github.com/pt/actions)
 - [Java Script](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Node](https://nodejs.org/en/)
 - [Expressjs](https://expressjs.com/pt-br/)
@@ -113,7 +114,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Docker Compose](https://docs.docker.com/compose/)
 - [Editor Config](https://editorconfig.org/)
 
-Entre outras, voce pode verificar todas as ferramentas usadas no arquivo [package.json](https://github.com/HigorAnjos/xp-backend/blob/main/package.json), em dependencies e devDependencies.
+Voce pode verificar todas ferramentas no arquivo [package.json](https://github.com/HigorAnjos/xp-backend/blob/main/package.json), em dependencies e devDependencies.
 
 
 # Autor
