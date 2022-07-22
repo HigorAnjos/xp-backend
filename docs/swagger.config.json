@@ -154,7 +154,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/Created"
+                  "$ref": "#/components/schemas/Token"
                 }
               }
             }
