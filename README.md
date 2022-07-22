@@ -23,7 +23,7 @@ Como a aplicacao esta no heroku, pode demorar um pouco para carregar a documenta
 ## Heroku
 
 O projeto esta disponivel online no
-[Heroko :smile:](https://xpbackend.herokuapp.com/)
+[Heroku :smile:](https://xpbackend.herokuapp.com/)
 
 ---
 
@@ -104,14 +104,14 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Git](https://git-scm.com/)
 - [Github Actions](https://docs.github.com/pt/actions)
-- [Java Script](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Node](https://nodejs.org/en/)
 - [Expressjs](https://expressjs.com/pt-br/)
 - [Jest](https://jestjs.io/pt-BR/)
 - [Supertest](https://www.npmjs.com/package/supertest)
 - [Eslint](https://eslint.org/)
 - [Sequelize](https://sequelize.org/docs/v6/getting-started/)
-- [Docker Compose](https://docs.docker.com/compose/)
+- [Docker-Compose](https://docs.docker.com/compose/)
 - [Editor Config](https://editorconfig.org/)
 
 Voce pode verificar todas ferramentas no arquivo [package.json](https://github.com/HigorAnjos/xp-backend/blob/main/package.json), em dependencies e devDependencies.
