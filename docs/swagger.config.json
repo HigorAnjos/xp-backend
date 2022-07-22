@@ -306,7 +306,7 @@
           }
         },
         "responses": {
-          "200": {
+          "201": {
             "description": "Ok",
             "content": {
               "application/json": {
@@ -374,13 +374,17 @@
           }
         },
         "responses": {
-          "200": {
+          "201": {
             "description": "Ok",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/Ok"
+                  "properties": {
+                    "balance": {
+                      "type": "integer"
+                    }
+                  }
                 }
               }
             }

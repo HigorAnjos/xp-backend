@@ -6,7 +6,10 @@ const withdraw = async (id, balance) => {
     throw { status: 400, message: 'Saldo insuficiente' };
   }
   wallet.balance -= balance;
+  const newBalance = wallet.balance;
   await wallet.save();
+
+  return newBalance;
 };
 
 module.exports = withdraw;

@@ -3,9 +3,9 @@ const services = require('../../services');
 const withdraw = async (req, res) => {
   const { id } = req.client;
   const { balance } = req.body;
-  await services.balance.withdraw(id, balance);
+  const newBalance = await services.balance.withdraw(id, balance);
 
-  return res.status(201).json({ message: 'Saque com sucesso' });
+  return res.status(201).json({ balance: newBalance });
 };
 
 module.exports = withdraw;

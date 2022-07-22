@@ -28,7 +28,7 @@ describe('Rota Balance withdraw', function () {
     .set('authorization', authorization);
 
     expect(response.status).toBe(201);
-    expect(response.body.message).toBe('Saque com sucesso');
+    expect(response.body.balance).toBe(400.00);
   });
 
   it('Nao deve ser possivel sacar valores negativos', async function () {
