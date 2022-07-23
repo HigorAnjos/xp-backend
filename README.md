@@ -75,7 +75,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 $ git clone git@github.com:HigorAnjos/xp-backend.git
 
 # Rodar o docker-compose
-$ docker compose up -d
+$ docker-compose up -d
 
 # Acessar a aplicação docker
 $ docker exec -it xp_backend_node bash
@@ -94,7 +94,7 @@ A aplicação estara disponivel em ```http://localhost:3001```
 
 Parar o container
 ```bash
-$ docker compose down
+$ docker-compose down
 ```
 ---
 
