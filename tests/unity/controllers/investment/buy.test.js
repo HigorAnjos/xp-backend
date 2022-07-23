@@ -20,12 +20,12 @@ describe('Controller Investment Buy', function () {
     res.status = sinon.stub().returns(res);
     res.json = sinon.stub().returns();
 
-    sinon.stub(service, 'buy').resolves();
+    sinon.stub(service.buy, 'make').resolves();
 
     await controller.buy(req, res);
     expect(res.status.calledWith(201)).to.be.true;
     expect(res.json.calledWith({ message: 'Investimento efetuado com sucesso' })).to.be.true;
 
-    service.buy.restore();
+    service.buy.make.restore();
   });
 });

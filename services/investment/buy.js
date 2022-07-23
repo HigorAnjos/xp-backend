@@ -57,6 +57,11 @@ const transaction = async (clientId, code, quantity) => {
   return result;
 };
 
-const buy = (clientId, code, quantity) => transaction(clientId, code, quantity);
+const make = (clientId, code, quantity) => transaction(clientId, code, quantity);
 
-module.exports = buy;
+module.exports = {
+  make,
+  iCanBuy,
+  getDbWallet,
+  getDbProduct,
+};
