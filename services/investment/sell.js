@@ -5,13 +5,14 @@
 /* eslint-disable no-await-in-loop */
 const { WalletProduct, Wallet, Product, sequelize } = require('../../database/models');
 
-const getDbWallet = async (clientId, t) => (await Wallet
-  .findByPk(clientId, { transaction: t })).dataValues;
+const getDbWallet = async (clientId, t) => (await Wallet.findByPk(clientId, { transaction: t })).dataValues;
 
 const getDbProductClient = async (clientId, productId, t) => {
   const products = await WalletProduct.findAll({
-  where: { walletId: clientId, productId },
-  transaction: t });
+    where: { walletId: clientId, productId },
+    transaction: t,
+  });
+
   if (products.length === 0) throw { status: 400, message: 'Produto não encontrado' }; // verificar se o produto existe
 
   return products.reduce((acc, cur) => {
@@ -91,6 +92,7 @@ const transaction = async (clientId, productId, quantity) => {
 
 const sell = (clientId, productId, quantity) => transaction(clientId, productId, quantity);
 
+module.exports = sell;
 /**
  * pegar carteira do cliente
  * pegar produtos do cliente
@@ -98,5 +100,3 @@ const sell = (clientId, productId, quantity) => transaction(clientId, productId,
  * adicionar o saldo na carteira do cliente
  * voltar a quantidade do produto para o estoque
  */
-
-module.exports = sell;
