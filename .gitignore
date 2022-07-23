@@ -2,3 +2,4 @@ node_modules
 tests/integration/coverage
 .env
 coverage
+.nyc_output

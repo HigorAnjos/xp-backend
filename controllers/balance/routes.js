@@ -6,7 +6,7 @@ const validations = require('../../middlewares/validations');
 const router = express.Router();
 
 router.get('/account', auth, account);
-router.post('/deposit', auth, validations.balance.deposit.isValid, deposit);
-router.post('/withdraw', auth, validations.balance.withdraw.isValid, withdraw);
+router.post('/deposit', auth, validations.balance.deposit, deposit);
+router.post('/withdraw', auth, validations.balance.withdraw, withdraw);
 
 module.exports = router;

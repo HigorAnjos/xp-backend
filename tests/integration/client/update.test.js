@@ -35,6 +35,7 @@ describe('Rota Client update', function () {
     .set('authorization', authorization);
 
     expect(response.status).toBe(201);
-    expect(response.body.message).toBe('Cliente atualizado com sucesso');
+    expect(response.body).toHaveProperty('token');
+    expect(typeof response.body.token).toBe('string');
   });
 });

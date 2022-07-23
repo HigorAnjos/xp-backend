@@ -8,4 +8,4 @@ const isValid = (req, _res, next) => {
   next();
 };
 
-module.exports = { isValid };
+module.exports = isValid;

@@ -17,6 +17,9 @@
     "db:drop": "npx sequelize-cli db:drop",
     "db:init": "npm run db:drop && npm run db:create && npm run db:migrate && npm run db:seed"
   },
+  "jest": {
+    "rootDir": "./tests/integration"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HigorAnjos/xp-backend.git"

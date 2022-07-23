@@ -41,7 +41,7 @@ describe('Rota Investment sell', function () {
 
     expect(responseAccount.status).toBe(200);
     console.log('Account', responseAccount.body);
-    expect(responseAccount.body.balance).toBe('120.00');
+    expect(responseAccount.body.balance).toBe(120.00);
 
     // verificar carteira de ativos do cliente
     const responseActive = await request
@@ -86,7 +86,7 @@ describe('Rota Investment sell', function () {
 
     expect(responseAccount.status).toBe(200);
     console.log('Account', responseAccount.body);
-    expect(responseAccount.body.balance).toBe('160.00');
+    expect(responseAccount.body.balance).toBe(160.00);
 
     // verificar carteira do cliente
     const responseActive = await request

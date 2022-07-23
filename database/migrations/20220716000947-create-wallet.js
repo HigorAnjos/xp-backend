@@ -19,7 +19,7 @@ module.exports = {
         },
       },
       balance: {
-        type: Sequelize.DECIMAL(10, 2),
+        type: Sequelize.DOUBLE,
       },
       createdAt: {
         allowNull: false,

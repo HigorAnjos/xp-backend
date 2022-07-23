@@ -20,24 +20,24 @@ jobs:
         - name: executando o lint para verificar se a erros
           run: npx eslint .
 
+  # Nao tem como fazer test de integracao por nao ter um banco configurado
+  # tests-integration:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #       - name: Verifica o repositório do Git
+  #         uses: actions/checkout@v2
 
-  tests-integration:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Verifica o repositório do Git
-          uses: actions/checkout@v2
-
-        - name: Instala o node com a versão
-          uses: actions/setup-node@v1
-          with:
-            node-version: 14
+  #       - name: Instala o node com a versão
+  #         uses: actions/setup-node@v1
+  #         with:
+  #           node-version: 14
 
 
-        - name: instalando as dependências
-          run: npm install
+  #       - name: instalando as dependências
+  #         run: npm install
 
-        - name: Run Tests
-          run: npm run ci:test
+  #       - name: Run Tests
+  #         run: npm run ci:test
 
   tests-uniy:
     runs-on: ubuntu-latest

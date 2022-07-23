@@ -10,4 +10,4 @@ const isValidFilds = (req, res, next) => {
   next();
 };
 
-module.exports = { isValidFilds };
+module.exports = isValidFilds;

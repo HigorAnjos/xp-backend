@@ -3,8 +3,8 @@ version: "3"
 services:
   # Serviço que irá rodar o node
   node:
-    # Imagem base do container
-    image: node:16
+    build: .
+    user: node
     # Nome do container para facilitar execução
     container_name: xp_backend_node
     # Mesmo que `docker run -t`
@@ -29,9 +29,11 @@ services:
       - db
      # Configura as variáveis de ambiente dentro do container
     environment:
-      DB_USER: root
-      DB_PASSWORD: password
-      DB_NAME: xp_backend
+      DB_USER: 'root'
+      DB_PASSWORD: 'password'
+      DB_NAME: 'xp_backend'
+      DB_DIALECT: 'mysql'
+      DB_PORT: '3306'
       DB_HOST: db # Nome do service logo abaixo
       PORT: '3001'
 
@@ -41,7 +43,9 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: 'password'
+      TZ: "America/Sao_Paulo" # Configuração para deixar o timezone do Brasil/Brasilia
     ports:
       # Garanta que não haverá conflitos de porta com um banco que esteja
       # rodando localmente
       - 3306:3306
+

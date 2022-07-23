@@ -1,8 +1,11 @@
 <h1 align="center">:fleur_de_lis: xp-backend</h1>
 
 <p align="center">Projeto para processo seletivo da xp :rocket: </p>
+<p align="center">Essa api backend simula gerenciar compras e vendas de ativos do mercado de ações</p>
 
 <p align="center">
+  <a href="#Swagger">Swagger</a> •
+  <a href="#Heroku">Heroku</a> •
   <a href="#Node">Node</a> •
   <a href="#Docker-Compose">Docker-Compose</a> •
   <a href="#Tecnologias">Tecnologias</a> •
@@ -10,157 +13,17 @@
 </p>
 
 
-## `user/`
 
-<details close>
-  <summary>:point_right: Criar um novo usuario endpoint.</summary>
-  <br>
+## Swagger
+A documentacao da api esta disponivel no [swagger](https://xpbackend.herokuapp.com/docs/).
 
-- O endpoint deve ser acessível através do caminho (`/user/create`);
+Como a aplicacao esta no heroku, pode demorar um pouco para carregar a documentacao.
 
-  - A requisicao `POST /user/create` deve conter o seguinte `body`:
+---
+## Heroku
 
-  <br>
-
-  ```json
-      {
-        "name": "higor anjos",
-        "email": "higorc.anjos@gmail.com",
-        "password": "123456"
-      }
-  ```
-
-  > :heavy_check_mark: Caso sucesso retornara o id deste usuario.
-  - API deve responder com status http `201` e o seguinte `body`:
-    ```json
-      {
-        "id": 5
-      }
-    ```
-
-  > :x: Por algum motivo nao seja possivel.
-
-  - API deve responder com status http `400` e o seguinte `body`:
-    ```json
-      { "error": "Erro ao criar usuário" }
-    ```
-</details>
-
-<details close>
-  <summary>:point_right: Login usuario endpoint.</summary>
-
-  <br>
-
-- O endpoint deve ser acessível através do caminho (`/user/`);
-
-  - A requisicao `POST /user/` deve conter o seguinte `body`:
-
-  <br>
-
-  ```json
-      {
-        "email": "higorc.anjos@gmail.com",
-        "password": "123456"
-      }
-  ```
-
-  > :heavy_check_mark: Caso sucesso retornara o token para este usuario.
-  - API deve responder com status http `200` e o seguinte `body`:
-    ```json
-      {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
-      }
-    ```
-
-  > :x: Por algum motivo nao seja possivel.
-
-  - API deve responder com status http `400` e o seguinte `body`:
-    ```json
-      { "error": "Senha ou email incorretos" }
-    ```
-</details>
-
-<details close>
-  <summary>:point_right: Atualizar usuario endpoint.</summary>
-
-  <br>
-
-- O endpoint deve ser acessível através do caminho (`/user/update`);
-
-  - A requisicao `PUT /user/update` deve conter o seguinte `headers` com o token de login:
-
-  <br>
-
-  ```json
-    {
-      "authorization":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
-    }
-  ```
-
-  - A requisicao `PUT /user/update` deve conter o seguinte `body`:
-
-  <br>
-
-  ```json
-      {
-        "name": "higor anjos",
-        "email": "higorc.anjos@gmail.com",
-        "password": "123456"
-      }
-  ```
-
-  > :heavy_check_mark: Caso sucesso retornara o token para este usuario.
-  - API deve responder com status http `200` e o seguinte `body`:
-    ```json
-      {
-        "message": "Usuário atualizado com sucesso"
-      }
-    ```
-
-  > :x: Por algum motivo nao seja possivel.
-
-  - API deve responder com status http `400` e o seguinte `body`:
-    ```json
-      { "error": "Não foi possivel atualizar o usuário" }
-    ```
-</details>
-
-<details close>
-  <summary>:point_right: Deletar usuario endpoint.</summary>
-
-  <br>
-
-- O endpoint deve ser acessível através do caminho (`/user/delete`);
-
-  - A requisicao `DELETE /user/delete` deve conter o seguinte `headers` com o token de login:
-
-  <br>
-
-  ```json
-    {
-      "authorization":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
-    }
-  ```
-
-
-  > :heavy_check_mark: Caso sucesso retornara o token para este usuario.
-  - API deve responder com status http `200` e o seguinte `body`:
-    ```json
-      {
-        "message": "Usuário removido com sucesso"
-      }
-    ```
-
-  > :x: Por algum motivo nao seja possivel.
-
-  - API deve responder com status http `400` e o seguinte `body`:
-    ```json
-      { "error": "Não foi possivel remover o usuário" }
-    ```
-</details>
-
-<br>
-
+O projeto esta disponivel online no
+[Heroku :smile:](https://xpbackend.herokuapp.com/)
 
 ---
 
@@ -187,11 +50,14 @@ $ cd xp-backend
 # Instale as dependências
 $ npm install
 
+# Popule o banco de dados
+$ npm run db:init
+
 # iniciar o projeto
 $ npm start
 ```
 
-A aplicação estara disponivel em ```http://localhost:3000/```
+A aplicação estara disponivel em ```http://localhost:3001/```
 
 ---
 
@@ -209,7 +75,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 $ git clone git@github.com:HigorAnjos/xp-backend.git
 
 # Rodar o docker-compose
-$ docker compose up -d
+$ docker-compose up -d
 
 # Acessar a aplicação docker
 $ docker exec -it xp_backend_node bash
@@ -217,15 +83,47 @@ $ docker exec -it xp_backend_node bash
 # Instale as dependências
 $ npm install
 
+# Popule o banco de dados
+$ npm run db:init
+
 # Rodar o projeto
 $ npm start
 ```
 
-A aplicação estara disponivel em ```http://localhost:3000```
+A aplicação estara disponivel em ```http://localhost:3001```
 
 Parar o container
 ```bash
-$ docker compose down
+$ docker-compose down
 ```
 ---
+
+## Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Git](https://git-scm.com/)
+- [Github Actions](https://docs.github.com/pt/actions)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Node](https://nodejs.org/en/)
+- [Expressjs](https://expressjs.com/pt-br/)
+- [Jest](https://jestjs.io/pt-BR/)
+- [Supertest](https://www.npmjs.com/package/supertest)
+- [Eslint](https://eslint.org/)
+- [Sequelize](https://sequelize.org/docs/v6/getting-started/)
+- [Docker-Compose](https://docs.docker.com/compose/)
+- [Editor Config](https://editorconfig.org/)
+
+Voce pode verificar todas ferramentas no arquivo [package.json](https://github.com/HigorAnjos/xp-backend/blob/main/package.json), em dependencies e devDependencies.
+
+
+# Autor
+
+<img alt="Higor Anjos" title="Higor Anjos" src="https://avatars.githubusercontent.com/u/38214470?v=4" height="100" width="100" />
+
+Made with 💜 by Higor Anjos 👋
+
+[![LinkedIn Badge](https://img.shields.io/badge/-Higor_Anjos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/higoranjos)](https://www.linkedin.com/in/higoranjos)
+
+
 
