@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 /* eslint-disable max-lines-per-function */
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-await-in-loop */
 const { WalletProduct, Wallet, Product, sequelize } = require('../../database/models');
