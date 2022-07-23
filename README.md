@@ -58,6 +58,7 @@ $ npm start
 ```
 
 A aplicação estara disponivel em ```http://localhost:3001/```
+
 A documentacao estara disponivel em ```http://localhost:3001/docs/```
 
 ---
@@ -92,6 +93,7 @@ $ npm start
 ```
 
 A aplicação estara disponivel em ```http://localhost:3001```
+
 A documentacao estara disponivel em ```http://localhost:3001/docs/```
 
 Parar o container
