@@ -9,6 +9,7 @@
         "sourceType": "module"
     },
     "rules": {
-      "no-throw-literal": 0
+      "no-throw-literal": 0,
+      "no-unused-expressions": 0
     }
 }
