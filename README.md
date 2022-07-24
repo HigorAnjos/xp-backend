@@ -102,6 +102,38 @@ $ docker-compose down
 ```
 ---
 
+## Sobre
+<p>
+  Esse projeto tem como finalidade a participacao do processo seletivo para XP. Ele foi organizado com a arquitetura MSC.
+  E seu banco relacional foi desenvolvido com o sequelize. 
+  Ele consiste em um Api Rest, que gerencia o fluxo do banco de dados.
+</p>
+
+### Arquitetura MSC
+
+  - Model
+  
+    <p> A camada da model foi abstraida pela biblioteca ORM(Object-Relational Mapping), Sequelize.</p>
+   
+  - Service
+   
+    <p> Na camada o service se encontra a regra de negocio e a comunicação com o ORM.</p>
+    
+  - Controller
+
+    <p> As funções na camada de Controller recebem as requisições e trás as respostas </p>
+   
+---
+
+   **:point_up: Além disso, a arquitetura utilizada conta com middlewares:**
+   
+   Eles são utilizados entre a requisição e a resposta. No projeto está sendo utilizado apenas para validações dos campos antes de chegar na camada do controller.
+
+---
+  
+### Modelagem do banco
+### 
+
 ## Tecnologias :hammer_and_wrench:
 
 Essas tecnologias foram escolhidas com base no domínio e experiência que tenho sobre elas. Principalmente quando considerado o tempo para realização do desafio e o meu foco em Backend. Essas ferramentas são tecnologias muito difundidas e testadas pela comunidade, o que passa maior credibilidade.
@@ -109,18 +141,18 @@ Essas tecnologias foram escolhidas com base no domínio e experiência que tenho
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Git](https://git-scm.com/)
-- [Github Actions](https://docs.github.com/pt/actions)
+- [Github Actions :octocat:](https://docs.github.com/pt/actions)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [JWT](https://jwt.io/)
+- [JWT :closed_lock_with_key:](https://jwt.io/)
 - [Node](https://nodejs.org/en/)
 - [Expressjs](https://expressjs.com/pt-br/)
 - [Jest](https://jestjs.io/pt-BR/)
 - [Supertest](https://www.npmjs.com/package/supertest)
-- [Eslint](https://eslint.org/)
+- [Eslint :lipstick:](https://eslint.org/)
 - [Sequelize](https://sequelize.org/docs/v6/getting-started/)
-- [Docker-Compose](https://docs.docker.com/compose/)
+- [Docker-Compose :whale2:](https://docs.docker.com/compose/)
 - [Editor Config](https://editorconfig.org/)
-- [Nodemoon](https://www.npmjs.com/package/nodemon)
+- [Nodemoon :crescent_moon:](https://www.npmjs.com/package/nodemon)
 
 Voce pode verificar todas ferramentas no arquivo [package.json](https://github.com/HigorAnjos/xp-backend/blob/main/package.json), em dependencies e devDependencies.
 
