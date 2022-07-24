@@ -8,6 +8,7 @@
   <a href="#Heroku">Heroku</a> •
   <a href="#Node">Node</a> •
   <a href="#Docker-Compose">Docker-Compose</a> •
+  <a href="#Sobre">Tecnologias</a> •
   <a href="#Tecnologias">Tecnologias</a> •
   <a href="#Autor">Autor</a>
 </p>
@@ -63,14 +64,14 @@ A documentacao estara disponivel em ```http://localhost:3001/docs/```
 
 ---
 
-# Docker-Compose :whale2:
+# Docker-Compose
 
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Docker](https://www.docker.com/), [Docker Compose](https://docs.docker.com/compose/install/).
 
-### Rodando com o doker-compose
+## Rodando com o doker-compose :whale2:
 
 ```bash
 # Clone este repositório
