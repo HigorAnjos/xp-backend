@@ -9,7 +9,7 @@
   <a href="#Node">Node</a> •
   <a href="#Docker-Compose">Docker-Compose</a> •
   <a href="#Sobre">Sobre</a> •
-  <a href="#Tecnologias:hammer_and_wrench:">Tecnologias</a> •
+  <a href="#Tecnologias">Tecnologias</a> •
   <a href="#Autor">Autor</a>
 </p>
 
