@@ -8,7 +8,7 @@
   <a href="#Heroku">Heroku</a> •
   <a href="#Node">Node</a> •
   <a href="#Docker-Compose">Docker-Compose</a> •
-  <a href="#Sobre">Tecnologias</a> •
+  <a href="#Sobre">Sobre</a> •
   <a href="#Tecnologias">Tecnologias</a> •
   <a href="#Autor">Autor</a>
 </p>
