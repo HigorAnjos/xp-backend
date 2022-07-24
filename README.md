@@ -9,7 +9,7 @@
   <a href="#Node">Node</a> •
   <a href="#Docker-Compose">Docker-Compose</a> •
   <a href="#Sobre">Sobre</a> •
-  <a href="#Tecnologias">Tecnologias</a> •
+  <a href="#Tecnologias:hammer_and_wrench:">Tecnologias</a> •
   <a href="#Autor">Autor</a>
 </p>
 
@@ -150,7 +150,7 @@ Primeiro eu considerei o CASE como sugestivo. Pois haviam requisitos a serem sol
 Em seguida, na modelagem do banco, o saldo do cliente está separado da tabela Clients, de forma que no futuro eu possa criar vários tipos de conta para um mesmo cliente.
 
 
-# Tecnologias :hammer_and_wrench:
+# Tecnologias:hammer_and_wrench: 
 
 Essas tecnologias foram escolhidas com base no domínio e experiência que tenho sobre elas. Principalmente quando considerado o tempo para realização do desafio e o meu foco em Backend. Essas ferramentas são tecnologias muito difundidas e testadas pela comunidade, o que passa maior credibilidade.
 
