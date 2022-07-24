@@ -131,8 +131,16 @@ $ docker-compose down
 
 ---
   
-### Modelagem do banco
-### 
+### Modelagem do banco de dados :classical_building: :game_die:
+
+  O sequelize foi utilizado para modelar(models) o banco de dados, criar as tabelas(migrations) e inserir dados iniciais(seeders), que são utilizados para testes.
+  Além disso, o sequelize traz métodos que podem ser utilizados por vários dialetos de bancos suportados pela biblioteca.
+  Para desenvolvimento utilizei mysql, e a aplicação se comunica com um banco de dados postgres na plataforma de deploy heroku.
+  
+  
+  ![Banco Relacional](https://github.com/HigorAnjos/xp-backend/blob/dev/models_db.png)
+
+---
 
 ## Tecnologias :hammer_and_wrench:
 
