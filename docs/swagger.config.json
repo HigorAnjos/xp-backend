@@ -13,12 +13,12 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3001",
-      "description": "localhost"
-    },
-    {
       "url": "https://xpbackend.herokuapp.com/",
       "description": "producao"
+    },
+    {
+      "url": "http://localhost:3001",
+      "description": "localhost"
     }
   ],
   "paths": {
@@ -249,6 +249,17 @@
                 "schema": {
                   "type": "object",
                   "$ref": "#/components/schemas/Account"
+                },
+                "examples": {
+                  "client": {
+                    "value": {
+                      "id": 1,
+                      "clientId": 1,
+                      "balance": "500.00",
+                      "createdAt": "2022-07-23T20:54:56.000Z",
+                      "updatedAt": "2022-07-23T20:54:56.000Z"
+                    }
+                  }
                 }
               }
             }
@@ -427,7 +438,19 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/Ok"
+                  "$ref": "#/components/schemas/Actives"
+                },
+                "examples": {
+                  "client": {
+                    "value": {
+                      "id": 1,
+                      "email": "higorc.anjos@gmail.com",
+                      "products": [
+                        { "code": 1,"name": "XPBR31","salePrice": "94.31", "quantity": 1 },
+                        { "code": 2,"name": "VALE3","salePrice": "10.00", "quantity": 1 }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -478,12 +501,32 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {
-                    "id": {
-                      "type":"integer"
-                    },
-                    "products": {
-                      "type": "array"
+                  "$ref": "#/components/schemas/Actives"
+                },
+                "examples": {
+                  "client": {
+                    "value": {
+                      "id": 1,
+                      "email": "higorc.anjos@gmail.com",
+                      "products": [{ "code": 1,"name": "XPBR31","salePrice": "94.31", "quantity": 1 }]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/BadRequest"
+                },
+                "examples": {
+                  "client": {
+                    "value": {
+                      "message": "authorization nao infomado"
                     }
                   }
                 }
@@ -495,8 +538,8 @@
     },
     "/investment/buy": {
       "post": {
-        "summary": "Comprar um compra insvestimento",
-        "description": "Comprar um compra insvestimento",
+        "summary": "Comprar um compra investimento",
+        "description": "Comprar um compra investimento",
         "tags": ["investment"],
         "security": [{ "bearerAuth": [] }],
         "requestBody": {
@@ -584,6 +627,13 @@
                 "schema": {
                   "type": "object",
                   "$ref": "#/components/schemas/Ok"
+                },
+                "examples": {
+                  "client": {
+                    "value": {
+                      "message": "Venda efetuada com sucesso"
+                    }
+                  }
                 }
               }
             }
@@ -623,6 +673,20 @@
             "description": "Ok",
             "content": {
               "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/investmentList"
+                  },
+                  "examples": {
+                    "client": {
+                      "value": {
+                        "id": 1,
+                        "name": "1234"
+                      }
+                    }
+                  }
+                }
               }
             }
           }
@@ -648,9 +712,19 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/investmentList"
+                  "type": "object",
+                  "$ref": "#/components/schemas/investmentList"
+                },
+                "examples": {
+                  "client": {
+                    "value": {
+                      "id": 1,
+                      "name": "XPBR31",
+                      "price": "94.31",
+                      "quantity": 500,
+                      "createdAt": "2022-07-23T20:54:56.000Z",
+                      "updatedAt": "2022-07-23T20:54:56.000Z"
+                    }
                   }
                 }
               }
@@ -764,6 +838,37 @@
           },
           "updatedAt": {
             "type": "string"
+          }
+        }
+      },
+      "Actives":{
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "email": {
+            "type": "string"
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "integer"
+                },
+                "salePrice": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "integer"
+                }
+              }
+            }
           }
         }
       }
