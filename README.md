@@ -102,13 +102,16 @@ $ docker-compose down
 ```
 ---
 
-## Tecnologias
+## Tecnologias :hammer_and_wrench:
+
+Essas tecnologias foram escolhidas com base no domínio e experiência que tenho sobre elas. Principalmente quando considerado o tempo para realização do desafio e o meu foco em Backend. Essas ferramentas são tecnologias muito difundidas e testadas pela comunidade, o que passa maior credibilidade.
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Git](https://git-scm.com/)
 - [Github Actions](https://docs.github.com/pt/actions)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [JWT](https://jwt.io/)
 - [Node](https://nodejs.org/en/)
 - [Expressjs](https://expressjs.com/pt-br/)
 - [Jest](https://jestjs.io/pt-BR/)
@@ -117,6 +120,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Sequelize](https://sequelize.org/docs/v6/getting-started/)
 - [Docker-Compose](https://docs.docker.com/compose/)
 - [Editor Config](https://editorconfig.org/)
+- [Nodemoon](https://www.npmjs.com/package/nodemon)
 
 Voce pode verificar todas ferramentas no arquivo [package.json](https://github.com/HigorAnjos/xp-backend/blob/main/package.json), em dependencies e devDependencies.
 
