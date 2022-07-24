@@ -14,20 +14,20 @@
 
 
 
-## Swagger
-A documentacao da api esta disponivel no [swagger](https://xpbackend.herokuapp.com/docs/).
+# Swagger
+A documentacao da api esta disponível no [swagger](https://xpbackend.herokuapp.com/docs/).
 
-Como a aplicacao esta no heroku, pode demorar um pouco para carregar a documentacao.
+Como a aplicacao esta no heroku, pode demorar um pouco para carregar a documentacao. :hourglass_flowing_sand:
 
 ---
-## Heroku
+# Heroku
 
-O projeto esta disponivel online no
+O projeto esta disponível online no
 [Heroku :smile:](https://xpbackend.herokuapp.com/)
 
 ---
 
-## Node
+# Node
 
 ### Pré-requisitos
 
@@ -63,14 +63,14 @@ A documentacao estara disponivel em ```http://localhost:3001/docs/```
 
 ---
 
-## Docker-Compose
+# Docker-Compose :whale2:
 
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Docker](https://www.docker.com/), [Docker Compose](https://docs.docker.com/compose/install/).
 
-## Rodando com o doker-compose
+### Rodando com o doker-compose
 
 ```bash
 # Clone este repositório
@@ -102,14 +102,14 @@ $ docker-compose down
 ```
 ---
 
-## Sobre
+# Sobre
 <p>
   Esse projeto tem como finalidade a participacao do processo seletivo para XP. Ele foi organizado com a arquitetura MSC.
   E seu banco relacional foi desenvolvido com o sequelize. 
   Ele consiste em um Api Rest, que gerencia o fluxo do banco de dados.
 </p>
 
-### Arquitetura MSC
+## Arquitetura MSC
 
   - Model
   
@@ -117,11 +117,11 @@ $ docker-compose down
    
   - Service
    
-    <p> Na camada o service se encontra a regra de negocio e a comunicação com o ORM.</p>
+    <p> Na camada de service se encontram as regras de negócio e a comunicação com o ORM.</p>
     
   - Controller
 
-    <p> As funções na camada de Controller recebem as requisições e trás as respostas </p>
+    <p> As funções na camada de Controller recebem as requisições e trazem as respostas </p>
    
 ---
 
@@ -131,7 +131,7 @@ $ docker-compose down
 
 ---
   
-### Modelagem do banco de dados :classical_building: :game_die:
+## Modelagem do banco de dados :classical_building: :game_die:
 
   O sequelize foi utilizado para modelar(models) o banco de dados, criar as tabelas(migrations) e inserir dados iniciais(seeders), que são utilizados para testes.
   Além disso, o sequelize traz métodos que podem ser utilizados por vários dialetos de bancos suportados pela biblioteca.
@@ -142,7 +142,14 @@ $ docker-compose down
 
 ---
 
-## Tecnologias :hammer_and_wrench:
+## Abordagem do desafio :crossed_swords:
+
+Primeiro eu considerei o CASE como sugestivo. Pois haviam requisitos a serem solucionados de várias formas. Por exemplo, eu poderia utilizar o jwt para validar uma seção do usuário, mas nos requisitos mínimos do case não pedia. Fazendo a utilização do JWT, não seria necessário fazer o envio do código do usuário(codCliente) em cada rota, porque já teria no jwt.
+ 
+Em seguida, na modelagem do banco, o saldo do cliente está separado da tabela Clients, de forma que no futuro eu possa criar vários tipos de conta para um mesmo cliente.
+
+
+# Tecnologias :hammer_and_wrench:
 
 Essas tecnologias foram escolhidas com base no domínio e experiência que tenho sobre elas. Principalmente quando considerado o tempo para realização do desafio e o meu foco em Backend. Essas ferramentas são tecnologias muito difundidas e testadas pela comunidade, o que passa maior credibilidade.
 
