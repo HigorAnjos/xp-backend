@@ -150,11 +150,11 @@ Primeiro eu considerei o CASE como sugestivo. Pois haviam requisitos a serem sol
 Em seguida, na modelagem do banco, o saldo do cliente está separado da tabela Clients, de forma que no futuro eu possa criar vários tipos de conta para um mesmo cliente.
 
 
-# Tecnologias:hammer_and_wrench: 
+# Tecnologias
 
 Essas tecnologias foram escolhidas com base no domínio e experiência que tenho sobre elas. Principalmente quando considerado o tempo para realização do desafio e o meu foco em Backend. Essas ferramentas são tecnologias muito difundidas e testadas pela comunidade, o que passa maior credibilidade.
 
-As seguintes ferramentas foram usadas na construção do projeto:
+:hammer_and_wrench: As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Git](https://git-scm.com/)
 - [Github Actions :octocat:](https://docs.github.com/pt/actions)
