@@ -13,12 +13,12 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3001",
-      "description": "localhost"
-    },
-    {
       "url": "https://xpbackend.herokuapp.com/",
       "description": "producao"
+    },
+    {
+      "url": "http://localhost:3001",
+      "description": "localhost"
     }
   ],
   "paths": {
